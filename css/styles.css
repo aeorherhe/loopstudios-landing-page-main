@@ -170,8 +170,8 @@ img {
 
 .btn {
   background: none;
-  border: 1px solid var(--Dark-Gray);
   border: none;
+  outline: 1px solid var(--Dark-Gray);
   cursor: pointer;
   letter-spacing: 0.07rem;
   padding: 0.5rem 1.5rem;
