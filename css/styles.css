@@ -389,7 +389,7 @@ img {
 .my-profile {
   align-items: center;
   background-color: var(--Black);
-  color: white;
+  color: var(--White);
   display: flex;
   font-size: 14px;
   gap: 20px;
