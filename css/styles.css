@@ -101,7 +101,7 @@ img {
 }
 
 .nav-menu {
-  cursor: pointer;
+  align-items: flex-start;
   flex-direction: column;
   padding: 4rem;
   text-transform: uppercase;
@@ -301,6 +301,7 @@ img {
   }
 
   .nav-menu {
+    align-items: center;
     background: none;
     display: flex;
     flex-direction: row;
@@ -311,6 +312,23 @@ img {
     text-transform: capitalize;
     transform: translate(0);
     min-height: auto;
+  }
+
+  .lists li:hover::after {
+    background-color: white;
+    bottom: -0.4rem;
+    content: "";
+    height: 0.05rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: var(--transition);
+    width: 2rem;
+    z-index: 11;
+  }
+
+  .nav-menu a:hover {
+    text-decoration: none;
   }
 
   .lists {
