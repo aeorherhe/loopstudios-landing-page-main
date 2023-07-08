@@ -115,6 +115,7 @@ img {
   transition: var(--transition);
   transform: translateX(100%);
   padding-top: 10rem;
+  min-height: 30rem;
 }
 
 .lists li {
@@ -273,7 +274,7 @@ img {
 }
 
 /* media query */
-@media screen and (min-width: 47rem) {
+@media screen and (min-width: 50rem) {
   .all-sections > * {
     padding: 1rem 5rem;
   }
