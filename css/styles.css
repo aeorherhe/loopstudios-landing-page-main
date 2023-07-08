@@ -71,12 +71,23 @@ img {
   color: var(--White);
   padding: 4rem 1rem;
   margin: 0 0 4rem;
+  height: 100vh;
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .nav-logo-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 11;
+}
+
+.navbar {
+  /* outline: var(--border); */
+  /* position: relative; */
 }
 
 .nav-toggle {
@@ -91,17 +102,26 @@ img {
 
 .nav-menu {
   cursor: pointer;
-  display: none;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 4rem;
   text-transform: uppercase;
+  position: absolute;
+  inset: 0;
+  background: var(--Black);
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+  justify-content: center;
+  transition: var(--transition);
+  transform: translateX(100%);
+  padding-top: 10rem;
 }
 
 .lists li {
   position: relative;
 }
 
-.lists li:hover::after {
+.lists li:hover::after:not(.nav-menu.lists) {
   background-color: white;
   bottom: -0.4rem;
   content: "";
@@ -114,16 +134,22 @@ img {
   z-index: 11;
 }
 
+.nav-menu a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
 /* for JS */
 .show-navbar .nav-menu {
-  display: flex;
+  transform: translateX(0);
+  transition: var(--transition);
 }
 .show-navbar .navbar {
-  padding: 4rem 1rem;
-  background: var(--Black);
+  padding: 4rem 0 0;
+  /* background: var(--Black); */
 }
 .show-navbar.nav-section {
-  padding: 0;
+  padding: 0 1rem;
 }
 .show-navbar .nav-close {
   display: block;
@@ -135,7 +161,7 @@ img {
 .header {
   border-radius: 1px;
   font-size: 1.3rem;
-  margin: 10rem 0;
+  margin: 20rem 0 10rem;
   outline: 2px solid var(--White);
   padding: 1.5rem;
   text-transform: uppercase;
@@ -280,7 +306,9 @@ img {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    position: static;
     text-transform: capitalize;
+    transform: translate(0);
   }
 
   .lists {
