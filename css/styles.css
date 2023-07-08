@@ -310,6 +310,7 @@ img {
     position: static;
     text-transform: capitalize;
     transform: translate(0);
+    min-height: auto;
   }
 
   .lists {
