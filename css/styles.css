@@ -112,9 +112,8 @@ img {
   gap: 1.5rem;
   font-size: 1.25rem;
   justify-content: center;
-  transition: var(--transition);
-  /* transform: translateX(100%); */
-  display: none;
+  transition: var(--transition2);
+  transform: scale(0);
   padding-top: 10rem;
   min-height: 30rem;
 }
@@ -143,13 +142,11 @@ img {
 
 /* for JS */
 .show-navbar .nav-menu {
-  display: flex;
-  /* transform: translateX(0); */
-  transition: var(--transition);
+  transform: scale(1);
+  transition: var(--transition2);
 }
 .show-navbar .navbar {
   padding: 4rem 0 0;
-  /* background: var(--Black); */
 }
 .show-navbar.nav-section {
   padding: 0 1rem;
